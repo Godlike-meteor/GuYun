@@ -8,10 +8,12 @@
       <span class="iconfont">&#xe632;</span>
       搜索基金、股票、债券...
     </div>
-    <div class="header-right">
-      {{this.city}}
-      <span class="iconfont arrow-icon">&#xe615;</span>
-    </div>
+    <router-link to='/city'>
+      <div class="header-right">
+        {{this.city}}
+        <span class="iconfont arrow-icon">&#xe615;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -51,6 +53,7 @@ export default {
       width 1.24rem
       float right
       text-align center
+      color #000
       .arrow-icon
         margin-left -.04rem
         font-size .24rem
