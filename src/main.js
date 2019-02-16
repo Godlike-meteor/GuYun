@@ -16,6 +16,7 @@ import '@/assets/styles/iconfont.css'
 // require styles
 import 'swiper/dist/css/swiper.css'
 import store from './store'
+import 'babel-polyfill'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)

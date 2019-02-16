@@ -74,7 +74,7 @@ export default {
         height .44rem
         line-height .44rem
         color #333;
-        font-size .05rem
+        font-size .24rem
         text-align center
         ellipsis()
 </style>
