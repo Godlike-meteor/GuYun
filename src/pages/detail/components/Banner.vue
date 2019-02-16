@@ -2,25 +2,34 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550304055051&di=83c58578da7e399dd6120a7f5352ca05&imgtype=0&src=http%3A%2F%2Fwww.jjl.cn%2Fuploadfile%2F2017%2F1212%2F1212151307240210273.jpg" />
+      <img class="banner-img" :src="bannerImg" />
       <div class="banner-info">
-        <div class="banner-title">一千元人民币在其他国家能花多久？</div>
+        <div class="banner-title">{{sightName}}</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe632;</span>
-          39
+          {{this.gallaryImgs.length}}
         </div>
       </div>
     </div>
-    <gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></gallary>
+    <Fade>
+      <gallary :imgs="gallaryImgs" v-show="showGallary" @close="handleGallaryClose"></gallary>
+    </Fade>
   </div>
 </template>
 
 <script>
 import Gallary from '@/common/gallary/Gallary'
+import Fade from '@/common/fade/Fade'
 export default {
   name: 'DetailBanner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
+  },
   components: {
-    Gallary
+    Gallary,
+    Fade
   },
   data () {
     return {
