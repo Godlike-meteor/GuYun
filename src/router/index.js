@@ -17,6 +17,14 @@ export default new Router({
       path: '/detail/:id',
       name: 'Detail',
       component: () => import('@/pages/detail/Detail')
+    }, {
+      path: '/own',
+      name: 'Own',
+      component: () => import('@/pages/own/Own')
+    }, {
+      path: '/licai',
+      name: 'Licai',
+      component: () => import('@/pages/licai/Licai')
     }
   ],
   scrollBehavior (to, from, savedPosition) {

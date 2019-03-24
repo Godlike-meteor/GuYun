@@ -5,6 +5,7 @@
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :iconList="iconList"></home-icons>
     <home-recommend :list="recommendList"></home-recommend>
+    <Tab-bar :select="selected"></Tab-bar>
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
+import TabBar from '@/common/tabbar/TabBar'
 import axios from 'axios'
 import { mapState } from 'vuex'
 export default {
@@ -21,14 +23,16 @@ export default {
     HomeHeader,
     HomeSwiper,
     HomeIcons,
-    HomeRecommend
+    HomeRecommend,
+    TabBar
   },
   data () {
     return {
       lastCity: '',
       swiperList: [],
       iconList: [],
-      recommendList: []
+      recommendList: [],
+      selected: 'home'
     }
   },
   methods: {

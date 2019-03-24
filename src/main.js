@@ -17,10 +17,14 @@ import '@/assets/styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 import store from './store'
 import 'babel-polyfill'
+import { Tabbar, TabItem } from 'mint-ui'
+import 'mint-ui/lib/style.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
+Vue.component(Tabbar.name, Tabbar)
+Vue.component(TabItem.name, TabItem)
 
 /* eslint-disable no-new */
 new Vue({

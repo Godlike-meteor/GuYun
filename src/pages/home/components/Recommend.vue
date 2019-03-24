@@ -18,6 +18,7 @@
         </div>
       </router-link>
     </ul>
+    <div class="nomore"></div>
   </div>
 </template>
 
@@ -61,4 +62,7 @@ export default {
         line-height .8rem
         font-size .18rem
         color #aaa
+  .nomore
+    width 100%
+    padding 1.2rem 0 0 0
 </style>
