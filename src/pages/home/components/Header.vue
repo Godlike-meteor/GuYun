@@ -1,9 +1,9 @@
 <!-- Home-Header -->
 <template>
   <div class="header">
-    <div class="header-left">
+    <router-link tag="div" to="/own" class="header-left">
       <div class="iconfont user-icon">&#xe66f;</div>
-    </div>
+    </router-link>
     <div class="header-input">
       <span class="iconfont">&#xe632;</span>
       搜索基金、股票、债券...

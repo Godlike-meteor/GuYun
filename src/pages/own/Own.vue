@@ -4,6 +4,8 @@
     <own-header></own-header>
     <own-user></own-user>
     <own-tab-bar></own-tab-bar>
+    <own-message></own-message>
+    <own-order></own-order>
   </div>
 </template>
 
@@ -11,12 +13,16 @@
 import OwnTabBar from './components/TabBar'
 import OwnHeader from './components/Header'
 import OwnUser from './components/User'
+import OwnMessage from './components/Message'
+import OwnOrder from './components/Order'
 export default {
   name: 'Own',
   components: {
     OwnTabBar,
     OwnHeader,
-    OwnUser
+    OwnUser,
+    OwnMessage,
+    OwnOrder
   }
 }
 </script>

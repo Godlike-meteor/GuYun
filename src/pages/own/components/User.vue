@@ -2,7 +2,7 @@
 <template>
   <div class="user">
     <div class="user-block">
-      <img class="user-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553510514075&di=d1c580393da2665a80bb8a944ba291f2&imgtype=0&src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F29%2F78%2F5923a895b5242_610.jpg" alt="">
+      <img class="user-img" :src="userImgUrl" alt="">
       <div class="user-information">
         <div class="user-title">
           {{userName}}
@@ -20,6 +20,7 @@ export default {
   name: 'OwnUser',
   data () {
     return {
+      userImgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553510514075&di=d1c580393da2665a80bb8a944ba291f2&imgtype=0&src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F29%2F78%2F5923a895b5242_610.jpg',
       userName: '13136611997',
       userDesc: '为保障账户安全，请设置欢迎语'
     }
@@ -35,7 +36,7 @@ export default {
       margin .32rem auto
       width 90%
       line-height 1.8rem
-      boeder 1px solid #f8f8f8
+      border 1px solid #f8f8f8
       border-radius .2rem
       background #fff
       .user-img
