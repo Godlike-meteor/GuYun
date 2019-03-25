@@ -2,21 +2,16 @@
 <template>
   <div class="licai">
     licai
-    <tab-bar :select="selected"></tab-bar>
+    <licai-tab-bar></licai-tab-bar>
   </div>
 </template>
 
 <script>
-import TabBar from '@/common/tabbar/TabBar'
+import LicaiTabBar from './components/TabBar'
 export default {
   name: 'Licai',
   components: {
-    TabBar
-  },
-  data () {
-    return {
-      selected: 'licai'
-    }
+    LicaiTabBar
   }
 }
 </script>

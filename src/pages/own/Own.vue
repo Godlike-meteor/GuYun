@@ -2,21 +2,16 @@
 <template>
   <div class="own">
     own
-    <tab-bar :select="selected"></tab-bar>
+    <own-tab-bar></own-tab-bar>
   </div>
 </template>
 
 <script>
-import TabBar from '@/common/tabbar/TabBar'
+import OwnTabBar from './components/TabBar'
 export default {
   name: 'Own',
   components: {
-    TabBar
-  },
-  data () {
-    return {
-      selected: 'own'
-    }
+    OwnTabBar
   }
 }
 </script>
