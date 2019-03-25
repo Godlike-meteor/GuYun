@@ -5,7 +5,7 @@
 ![VueRouter](https://img.shields.io/badge/VueRouter-3.0.1-brightgreen.svg)&nbsp;
 ![Webpack](https://img.shields.io/badge/Webpack-3.6.0-brightgreen.svg)
 
-> 一款基于Vue.js的购物产品，个性化的理财推荐。
+> 一款基于Vue.js的文物交易产品。
 
 ## 运行指南
 
