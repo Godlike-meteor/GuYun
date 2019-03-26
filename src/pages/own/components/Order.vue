@@ -4,7 +4,7 @@
     <div class="order-radius border-bottom">
       我的订单
     </div>
-    <div class="order-block" v-for="item of order" :key="item.id">
+    <div class="order-block border-bottom" v-for="item of order" :key="item.id">
       <img class="order-icon" :src="item.orderImgUrl" alt="">
       <div class="order-content">
         {{item.orderContent}}

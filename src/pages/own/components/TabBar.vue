@@ -12,7 +12,7 @@
       </mt-tab-item>
       <mt-tab-item id="licai">
         <img slot="icon" src="../../../assets/licai.png">
-        <p>理财</p>
+        <p>古玩</p>
       </mt-tab-item>
     </mt-tabbar>
   </div>
@@ -46,4 +46,5 @@ export default {
     bottom 0
     width 100%
     height 1.2rem
+    z-index 102
 </style>

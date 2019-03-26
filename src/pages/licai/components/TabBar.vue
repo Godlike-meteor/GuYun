@@ -12,7 +12,7 @@
       </mt-tab-item>
       <mt-tab-item id="licai">
         <img slot="icon" src="../../../assets/licai.png">
-        <p>理财</p>
+        <p>古玩</p>
       </mt-tab-item>
     </mt-tabbar>
   </div>
