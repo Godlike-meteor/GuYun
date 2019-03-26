@@ -1,7 +1,9 @@
 <!-- Own-Order -->
 <template>
   <div class="order">
-    <div class="order-radius"></div>
+    <div class="order-radius border-bottom">
+      我的订单
+    </div>
     <div class="order-block" v-for="item of order" :key="item.id">
       <img class="order-icon" :src="item.orderImgUrl" alt="">
       <div class="order-content">
@@ -49,9 +51,11 @@ export default {
     .order-radius
       margin 0 auto
       width 90%
-      height .2rem
+      line-height .8rem
       border-radius .2rem .2rem 0 0
       background #fff
+      font-weight bold
+      text-align center
     .order-block
       margin 0 auto
       width 90%
