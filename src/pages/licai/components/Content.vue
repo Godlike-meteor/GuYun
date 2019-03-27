@@ -6,13 +6,13 @@
         个性推荐
       </div>
       <div class="content-img">
-        <img class="content-img-url" src="http://file8.gucn.com/file/CurioPicfile/20190314/GucnP_U563536T150091461552568648936.jpg" alt="">
+        <img class="content-img-url" :src="contentImgUrl">
       </div>
       <div class="content-desc">
-        中国大盘子
+        {{contentDesc}}
       </div>
       <div class="content-price">
-        ￥250,000 预计涨幅15%
+        {{contentPrice}}
       </div>
       <div class="content-change" @click="handleChangeCard">
         购 买
@@ -24,9 +24,16 @@
 <script>
 export default {
   name: 'LicaiContent',
+  data () {
+    return {
+      contentDesc: '中国大盘子',
+      contentPrice: '￥250,000 预计涨幅15%',
+      contentImgUrl: 'http://file8.gucn.com/file/CurioPicfile/20190314/GucnP_U563536T150091461552568648936.jpg'
+    }
+  },
   methods: {
     handleChangeCard () {
-      console.log('123')
+      console.log('调取数据库啊')
     }
   }
 }

@@ -1,9 +1,9 @@
 <!-- Lical-Ad -->
 <template>
   <div class="ad">
-    <router-link tag="div" to="/detail/1" class="ad-block">
+    <router-link tag="div" :to="linkTo" class="ad-block">
       <div class="ad-text">
-        最美藏品开展，一起来看看吧
+        {{adText}}
       </div>
       <div class="ad-button">
          <div class="iconfont ad-link">&#xe628;</div>
@@ -14,7 +14,13 @@
 
 <script>
 export default {
-  name: 'LicaiAd'
+  name: 'LicaiAd',
+  data () {
+    return {
+      adText: '最美藏品开展，一起来看看吧',
+      linkTo: '/detail/1'
+    }
+  }
 }
 </script>
 
@@ -22,7 +28,7 @@ export default {
   .ad
     position absolute
     width 100%
-    top 13.2rem
+    top 13.7rem
     opacity .8
     z-index 99
     .ad-block

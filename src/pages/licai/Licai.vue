@@ -30,7 +30,7 @@ export default {
 <style lang="stylus" scoped>
   .licai
     width 100%
-    height 17rem
+    height 17.5rem
     background-image url('../../assets/beijing.png')
     background-size: 100% 25rem
 </style>

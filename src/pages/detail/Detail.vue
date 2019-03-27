@@ -7,19 +7,21 @@
       :gallaryImgs="gallaryImgs"
     ></detail-banner>
     <detail-header></detail-header>
-    <div class="contenr"></div>
+    <detail-text></detail-text>
   </div>
 </template>
 
 <script>
 import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
+import DetailText from './components/Text'
 import axios from 'axios'
 export default {
   name: 'Detail',
   components: {
     DetailBanner,
-    DetailHeader
+    DetailHeader,
+    DetailText
   },
   data () {
     return {
