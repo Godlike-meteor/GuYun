@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'DetailHeader'
+  name: 'LicaiHeader'
 }
 </script>
 
@@ -28,6 +28,7 @@ export default {
     font-size .32rem
     font-weight bold
     background #fff
+    z-index 100
     .licai-fixed-back
       position absolute
       top 0
