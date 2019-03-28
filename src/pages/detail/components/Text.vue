@@ -24,14 +24,12 @@
 <script>
 export default {
   name: 'DetailText',
-  data () {
-    return {
-      title: '学院我说了算！',
-      authorName: '观察者网',
-      authorDesc: '昨天 · 观察者网 · 中国关怀 · 全球视野',
-      authorImgSrc: 'http://img2.imgtn.bdimg.com/it/u=252376943,2755465431&fm=26&gp=0.jpg',
-      text: '涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。'
-    }
+  props: {
+    title: String,
+    authorName: String,
+    authorDesc: String,
+    authorImgSrc: String,
+    text: String
   }
 }
 </script>
@@ -44,6 +42,7 @@ export default {
     font-size .4rem
     text-indent 1em
     font-weight bold
+    letter-spacing .2rem
   .text-author
     width 100%
     height 1rem
@@ -66,6 +65,7 @@ export default {
         font-size .28rem
         color #b1b1b1
   .text-main
-    line-height .4rem
-    text-indent 1em
+    line-height .6rem
+    letter-spacing .1rem
+    text-indent 2em
 </style>

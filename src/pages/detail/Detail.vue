@@ -7,7 +7,13 @@
       :gallaryImgs="gallaryImgs"
     ></detail-banner>
     <detail-header></detail-header>
-    <detail-text></detail-text>
+    <detail-text
+      :title="title"
+      :text="desc"
+      :authorName="author"
+      :authorDesc="author_desc"
+      :authorImgSrc="author_img"
+    ></detail-text>
   </div>
 </template>
 
@@ -27,7 +33,12 @@ export default {
     return {
       sightName: '',
       bannerImg: '',
-      gallaryImgs: []
+      gallaryImgs: [],
+      title: '',
+      desc: '',
+      author: '',
+      author_desc: '',
+      author_img: ''
     }
   },
   methods: {
@@ -45,6 +56,11 @@ export default {
         this.sightName = data.sightName
         this.bannerImg = data.bannerImg
         this.gallaryImgs = data.gallaryImgs
+        this.title = data.title
+        this.desc = data.desc
+        this.author = data.author
+        this.author_desc = data.author_desc
+        this.author_img = data.author_img
       }
     }
   },
