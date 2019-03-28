@@ -5,9 +5,7 @@
       {{title}}
     </div>
     <div class="text-author">
-      <div class="author-img">
-        <img class="author-img-src" :src="authorImgSrc" alt="">
-      </div>
+      <img class="author-img-src" :src="authorImgSrc" alt="132">
       <div class="author-content">
         <div class="author-name">
           {{authorName}}
@@ -31,7 +29,7 @@ export default {
       title: '学院我说了算！',
       authorName: '观察者网',
       authorDesc: '昨天 · 观察者网 · 中国关怀 · 全球视野',
-      authorImgSrc: 'http://b-ssl.duitang.com/uploads/item/201811/20/20181120204138_irzdb.jpg',
+      authorImgSrc: 'http://img2.imgtn.bdimg.com/it/u=252376943,2755465431&fm=26&gp=0.jpg',
       text: '涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。涉事学生：我就想要一个公平。记者发现，涉事学生先是通过一自媒体大V发布了这段视频，然后用名为“YoungS-Y”的账号，在社交媒体上更新学校对该事件的处理进展。'
     }
   }
@@ -50,17 +48,12 @@ export default {
     width 100%
     height 1rem
     line-height 1rem
-    .author-img
-      display inline-block
+    .author-img-src
+      margin-top -.6rem
+      margin-left .2rem
       width .7rem
       height .7rem
-      margin-left .2rem
-      .author-img-src
-        margin-top -.6rem
-        width 100%
-        height .7rem
-        line-height .7rem
-        border-radius 50%
+      border-radius 50%
     .author-content
       display inline-block
       height .7rem

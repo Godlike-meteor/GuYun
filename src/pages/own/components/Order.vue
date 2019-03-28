@@ -69,7 +69,7 @@ export default {
       display inline-block
       margin-left .1rem
       line-height 1rem
-      width 63%
+      width 50%
       font-weight bold
     .message-link
       display inline-block

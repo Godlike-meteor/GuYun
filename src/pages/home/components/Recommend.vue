@@ -1,7 +1,7 @@
 <!-- Home-Recommend -->
 <template>
   <div>
-    <div class="title">理财文章</div>
+    <div class="title">古玩鉴赏</div>
     <ul>
       <router-link
         tag="li"

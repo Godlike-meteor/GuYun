@@ -6,7 +6,7 @@
     </router-link>
     <div class="header-input">
       <span class="iconfont">&#xe632;</span>
-      搜索基金、股票、债券...
+      搜索瓷器、书画、文玩...
     </div>
     <router-link to='/city'>
       <div class="header-right">
