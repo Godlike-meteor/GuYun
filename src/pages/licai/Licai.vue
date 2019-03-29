@@ -3,7 +3,7 @@
   <div class="licai">
     <licai-header></licai-header>
     <licai-content :collection="collection"></licai-content>
-    <licai-tool></licai-tool>
+    <licai-tool @childrenEvent="handleChildClick"></licai-tool>
     <licai-ad></licai-ad>
     <licai-tab-bar></licai-tab-bar>
   </div>
@@ -40,6 +40,9 @@ export default {
         const data = res.data
         this.collection = data.collection
       }
+    },
+    handleChildClick (data) {
+      this.collection = data
     }
   },
   mounted () {

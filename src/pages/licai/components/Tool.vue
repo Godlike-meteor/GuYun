@@ -44,8 +44,8 @@ export default {
           value: '书画'
         }, {
           id: 3,
-          name: '不限',
-          value: '不限'
+          name: '其他',
+          value: '其他'
         }
       ],
       moneyList: [
@@ -77,29 +77,41 @@ export default {
           name: '高',
           value: '高'
         }
-      ]
+      ],
+      name: '',
+      picture: '',
+      price: '',
+      sum: ''
     }
   },
   methods: {
     handleClick () {
-      console.log(this.typeSelected)
-      console.log(this.moneySelected)
-      console.log(this.riskSelected)
+      this.getToolInfo()
     },
     getToolInfo () {
-      axios.get('/api/change.php').then(this.handlegetToolInfo)
+      axios.get('/api/change.php?type=' + this.typeSelected + '&money=' + this.moneySelected + '&risk=' + this.riskSelected).then(this.handlegetToolInfo)
     },
-    handlegetToolInfo () {
-      console.log('success')
+    handlegetToolInfo (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.name = data.name
+        this.imgUrl = data.imgUrl
+        this.price = data.price
+        this.sum = data.sum
+        this.$emit('childrenEvent', {
+          name: this.name,
+          picture: this.imgUrl,
+          price: this.price,
+          sum: this.sum
+        })
+      }
     }
   },
   created () {
     this.typeSelected = this.typeList[0].name
     this.moneySelected = this.moneyList[0].name
     this.riskSelected = this.riskList[0].name
-  },
-  mounted () {
-    this.getToolInfo()
   }
 }
 </script>

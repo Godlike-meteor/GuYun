@@ -12,10 +12,10 @@
         {{collection.name}}
       </div>
       <div class="content-price">
-        ￥{{collection.price}} 有{{collection.profitProbability}}概率看涨
+        ￥{{collection.price}}
       </div>
       <div class="content-change" @click="handleChangeCard">
-        购 买
+        收 藏
       </div>
     </div>
   </div>
