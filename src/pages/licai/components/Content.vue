@@ -32,7 +32,7 @@ export default {
   methods: {
     handleChangeCard () {
       axios.get('/api/buy.php?orderImgUrl=' + this.collection.picture + '&orderContent=' + this.collection.name)
-      MessageBox.alert('购买成功！').then(() => {
+      MessageBox.alert('收藏成功！').then(() => {
         this.$router.push('/own')
       })
     }
