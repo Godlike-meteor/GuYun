@@ -2,7 +2,7 @@
 <template>
   <div class="licai">
     <licai-header></licai-header>
-    <licai-content></licai-content>
+    <licai-content :collection="collection"></licai-content>
     <licai-tool></licai-tool>
     <licai-ad></licai-ad>
     <licai-tab-bar></licai-tab-bar>
@@ -15,6 +15,7 @@ import LicaiHeader from './components/Header'
 import LicaiContent from './components/Content'
 import LicaiTool from './components/Tool'
 import LicaiAd from './components/Ad'
+import axios from 'axios'
 export default {
   name: 'Licai',
   components: {
@@ -23,6 +24,26 @@ export default {
     LicaiContent,
     LicaiTool,
     LicaiAd
+  },
+  data () {
+    return {
+      collection: {}
+    }
+  },
+  methods: {
+    getLicaiInfo () {
+      axios.get('/api/licai.php').then(this.getLicaiInfoSucc)
+    },
+    getLicaiInfoSucc (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.collection = data.collection
+      }
+    }
+  },
+  mounted () {
+    this.getLicaiInfo()
   }
 }
 </script>

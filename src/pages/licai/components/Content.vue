@@ -6,13 +6,13 @@
         个性推荐
       </div>
       <div class="content-img">
-        <img class="content-img-url" :src="contentImgUrl">
+        <img class="content-img-url" :src="collection.picture">
       </div>
       <div class="content-desc">
-        {{contentDesc}}
+        {{collection.name}}
       </div>
       <div class="content-price">
-        {{contentPrice}}
+        ￥{{collection.price}} 有{{collection.profitProbability}}概率看涨
       </div>
       <div class="content-change" @click="handleChangeCard">
         购 买
@@ -22,18 +22,19 @@
 </template>
 
 <script>
+import axios from 'axios'
+import { MessageBox } from 'mint-ui'
 export default {
   name: 'LicaiContent',
-  data () {
-    return {
-      contentDesc: '中国大盘子',
-      contentPrice: '￥250,000 预计涨幅15%',
-      contentImgUrl: 'http://file8.gucn.com/file/CurioPicfile/20190314/GucnP_U563536T150091461552568648936.jpg'
-    }
+  props: {
+    collection: Object
   },
   methods: {
     handleChangeCard () {
-      console.log('调取数据库啊')
+      axios.get('/api/buy.php?orderImgUrl=' + this.collection.picture + '&orderContent=' + this.collection.name)
+      MessageBox.alert('购买成功！').then(() => {
+        this.$router.push('/own')
+      })
     }
   }
 }

@@ -6,28 +6,29 @@
         推荐工具
       </div>
       <div class="tool-item">
-        <select name="type" id="type" v-model="typeSelected" @change="getTypeSelected">
+        <select name="type" id="type" v-model="typeSelected">
           <option v-for="item in typeList" :key="item.id">{{item.name}}</option>
         </select>
       </div>
       <div class="tool-item">
-        <select name="money" id="money" v-model="moneySelected" @change="getMoneySelected">
+        <select name="money" id="money" v-model="moneySelected">
           <option v-for="item in moneyList" :key="item.id">{{item.name}}</option>
         </select>
       </div>
       <div class="tool-item">
-        <select name="risk" id="risk" v-model="riskSelected" @change="getRiskSelected">
+        <select name="risk" id="risk" v-model="riskSelected">
           <option v-for="item in riskList" :key="item.id">{{item.name}}</option>
         </select>
       </div>
       <div class="tool-change" @click="handleClick">
-        购 买
+        测 一 测
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'LicaiTool',
   data () {
@@ -85,20 +86,20 @@ export default {
       console.log(this.moneySelected)
       console.log(this.riskSelected)
     },
-    getTypeSelected () {
-      console.log(this.typeSelected)
+    getToolInfo () {
+      axios.get('/api/change.php').then(this.handlegetToolInfo)
     },
-    getMoneySelected () {
-      console.log(this.moneySelected)
-    },
-    getRiskSelected () {
-      console.log(this.riskSelected)
+    handlegetToolInfo () {
+      console.log('success')
     }
   },
   created () {
     this.typeSelected = this.typeList[0].name
     this.moneySelected = this.moneyList[0].name
     this.riskSelected = this.riskList[0].name
+  },
+  mounted () {
+    this.getToolInfo()
   }
 }
 </script>
