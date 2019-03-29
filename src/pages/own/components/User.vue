@@ -2,13 +2,13 @@
 <template>
   <div class="user">
     <div class="user-block">
-      <img class="user-img" :src="userImgUrl" alt="">
+      <img class="user-img" :src="user.userImgUrl" alt="">
       <div class="user-information">
         <div class="user-title">
-          {{userName}}
+          {{user.userName}}
         </div>
         <div class="user-desc">
-          {{userDesc}}
+          {{user.userDesc}}
         </div>
       </div>
     </div>
@@ -18,12 +18,8 @@
 <script>
 export default {
   name: 'OwnUser',
-  data () {
-    return {
-      userImgUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553510514075&di=d1c580393da2665a80bb8a944ba291f2&imgtype=0&src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F29%2F78%2F5923a895b5242_610.jpg',
-      userName: '13136611997',
-      userDesc: '为保障账户安全，请设置欢迎语'
-    }
+  props: {
+    user: Object
   }
 }
 </script>

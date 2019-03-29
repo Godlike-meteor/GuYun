@@ -17,7 +17,7 @@ export default {
   name: 'LicaiAd',
   data () {
     return {
-      adText: '最美藏品开展，一起来看看吧',
+      adText: '唐代陶猴头，不容错过~',
       linkTo: '/detail/1'
     }
   }

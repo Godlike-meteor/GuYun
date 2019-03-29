@@ -18,28 +18,8 @@
 <script>
 export default {
   name: 'OwnOrder',
-  data () {
-    return {
-      order: [{
-        orderImgUrl: 'http://file8.gucn.com/file/CurioPicfile/20190314/GucnP_U563536T150091461552568648936.jpg',
-        orderContent: '中国大盘子'
-      }, {
-        orderImgUrl: 'http://file8.gucn.com/file/CurioPicfile/20190314/GucnP_U563536T150091461552568648936.jpg',
-        orderContent: '中国大盘子'
-      }, {
-        orderImgUrl: 'http://file8.gucn.com/file/CurioPicfile/20190314/GucnP_U563536T150091461552568648936.jpg',
-        orderContent: '中国大盘子'
-      }, {
-        orderImgUrl: 'http://file8.gucn.com/file/CurioPicfile/20190314/GucnP_U563536T150091461552568648936.jpg',
-        orderContent: '中国大盘子'
-      }, {
-        orderImgUrl: 'http://file8.gucn.com/file/CurioPicfile/20190314/GucnP_U563536T150091461552568648936.jpg',
-        orderContent: '中国大盘子'
-      }, {
-        orderImgUrl: 'http://file8.gucn.com/file/CurioPicfile/20190314/GucnP_U563536T150091461552568648936.jpg',
-        orderContent: '中国大盘子'
-      }]
-    }
+  props: {
+    order: Array
   }
 }
 </script>
